@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Color Changer</title>
+    <style>
+        body {
+
+            font-family: Arial, sans-serif;
+            background: #f3f4f6;
+            text-align: center;
+            padding-top: 80px;
+            transition: 0.3s;
+        }
+
+        .card {
+            background: white;
+            width: 350px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        select {
+            width: 200px;
+            padding: 8px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            background: #333;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #555;
+        }
+    </style>
+    <script> function changeBG(color) { document.body.style.backgroundColor = color; } function changeText(color) { document.body.style.color = color; } </script>
+</head>
+
+<body>
+    <div class="card">
+        <h2>Change Page Colors</h2> <label>Background Color</label><br> <select onchange="changeBG(this.value)">
+            <option value="white">White</option>
+            <option value="yellow">Yellow</option>
+            <option value="lightblue">Light Blue</option>
+            <option value="lightgreen">Light Green</option>
+            <option value="pink">Pink</option>
+            <option value="orange">Orange</option>
+        </select> <br><br> <label>Text Color</label><br> <select onchange="changeText(this.value)">
+            <option value="black">Black</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="purple">Purple</option>
+        </select> <br> <a href="index1.html"> <button>Back to Page 1</button> </a>
+    </div>
+</body>
+
+</html>

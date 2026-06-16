@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Birthday Countdown</title>
+    <script> function daysLeftForBirthday() { 
+let birthDate = document.getElementById("bday").value; 
+if (birthDate == "") {
+ 		alert("Please enter your birthday"); 
+return; 
+} 
+let today = new Date(); 
+let birthday = new Date(birthDate); 
+birthday.setFullYear(today.getFullYear()); 
+if (birthday < today) { 
+birthday.setFullYear(today.getFullYear() + 1);
+} 
+let diffTime = birthday - today;
+let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+alert("Days left for your birthday: " + diffDays); 
+} 
+</script>
+</head>
+<body>
+    <h2>Birthday Countdown</h2> Enter Your Birthday: <input type="date" id="bday"> <button
+        onclick="daysLeftForBirthday()">Calculate Days</button>
+</body>
+
+</html>
